@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>To do</h1>
-<%= render partial: 'tasks_table', locals: {tasks: @to_do} %>
-
-<h1>Doing</h1>
-<%= render partial: 'tasks_table', locals: {tasks: @doing} %>
-
-<h1>Done</h1>
-<%= render partial: 'tasks_table', locals: {tasks: @done} %>
-
+<div class="row">
+  <div class="col-md-4">
+    <%= render @to_do %>
+  </div>
+    <div class="col-md-4">
+    <%= render @doing %>
+  </div>
+    <div class="col-md-4">
+    <%= render @done %>
+  </div>
+</div>
 <br>
 
 <%= link_to 'New Task', new_task_path %>

@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   def change
     @task.update_attributes(state: params[:state])
     respond_to do |format|
-      format.html {redirect_to tasks_path, notice: "Task status changed"}
+      format.html {redirect_to tasks_path}
     end
   end
   # POST /tasks
